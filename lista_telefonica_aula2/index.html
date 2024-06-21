@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="listaTelefonica">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista Telefônica</title>
+    <link rel="stylesheet" href="../bootstrap-4.5.3-dist/css/bootstrap.css">
+    <style>
+        .jumbotron{
+            width: 400px;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 30px;
+        }
+        .table{
+            margin-top: 20px;
+        }
+        .form-control{
+            margin-bottom: 5px;
+        }
+    </style>
+    <script src="../angular-1.6.10/angular.js"></script>
+    <script>
+        angular.module("listaTelefonica",[]);
+        angular.module("listaTelefonica").controller("listaTelefonicaCtrl", function($scope){
+            $scope.app = 'Lista telefonica';
+            $scope.contatos = [
+                {nome: "Nilson", telefone: "999229147"},
+                {nome: "Fabiana", telefone: "996270841"},
+                {nome: "Maria", telefone: "999226544"},
+            ];
+            $scope.adicionarContato = function (contato) {
+                $scope.contatos.push(angular.copy(contato));
+                delete $scope.contato;
+            }
+        });
+    </script>
+</head>
+<body ng-controller="listaTelefonicaCtrl">
+    <div class="jumbotron">
+        <h3 ng-bind="app"></h3>
+        <table class="table table-striped">
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+            </tr>
+            <tr ng-repeat="contato in contatos">
+              <td ng-repeat="(key,value) in contato">
+                {{value}}
+              </td>
+            </tr>
+        </table>
+        <hr>
+        <input  class="form-control" type="text" ng-model="contato.nome" placeholder="Digite seu nome">
+        <input class="form-control" type="text" ng-model="contato.telefone" placeholder="Informe seu telefone">
+        <button class="btn btn-primary btn-block" ng-click="adicionarContato(contato)">Adicionar Contato</button>
+    </div>
+    
+</body>
+</html>
