@@ -20,3 +20,24 @@
 ## ng-click
 
     Quando ocorre o evento de click chama a função passada
+
+## ng-disabled
+
+    Desabilita um elemento dinamicamente
+    Ex: ng-disabled="!contato.nome || !contato.telefone"
+
+## ng-options
+
+    Renderiza as opçoes de um select
+    Ex: <select class="form-control" ng-model="contato.operadora" ng-options="operadora.nome for operadora in operadoras">
+
+    Atribui o codigo ao value do select ao inves do objeto todo
+        ng-options="operadora.codigo as operadora.nome for operadora in operadoras"
+
+    Divide a opçoes por agrupamentos definidos, que nesse caso foi por categoria
+        ng-options="operadora.nome group by operadora.categoria for operadora in operadoras"
+
+## ng-class e ng-style
+
+    Usadas para aplicar classes Css e estilos dinamicamente
+    Ex:  <tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos">
