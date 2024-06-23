@@ -41,3 +41,32 @@
 
     Usadas para aplicar classes Css e estilos dinamicamente
     Ex:  <tr ng-class="{'selecionado negrito': contato.selecionado}" ng-repeat="contato in contatos">
+    Ex: ng-style="{'background-color': contato.cor}"
+
+## ng-show ng-hide ngif
+
+    Exibe um elemento condicionalmente
+     ng-show="isContatoSelecionado(contatos)" - mostra o elemento onde foi chamado se for true
+     ng-hide="isContatoSelecionado(contatos)" - esconde o elemento onde foi chamado se for true
+     ng-if="isContatoSelecionado(contatos)" - renderiza algo se for true
+
+## ng-include
+
+    inclui conteúdo dinamicamente
+    Ex: <div ng-include="'footer.html'"></div>
+
+## ng-required
+
+    Define um determinado campo como obrigatório
+    Ex: ng-required="true"
+
+## $valid e $invalid
+
+    Consultando a validade de um campo ou formulário
+    Ex: <form name="contatoForm">
+        ng-disabled="contatoForm.$invalid"
+
+## $pristine e $dirty
+
+    Verificando se um formulário ou campo já foi utilizado alguma vez
+    Ex: ng-show="contatoForm.nome.$invalid && contatoForm.nome.$dirty"
