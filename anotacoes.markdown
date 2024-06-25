@@ -147,6 +147,25 @@
 
     function($scope, $filter)
     $filter('uppercase')("Nilson")
-    ou 
+    ou
     uppercaseFilter
     uppercaseFilter("Nilson")
+
+# Requisições
+
+## http
+
+    O serviço permite a realização de requisições utilizando XMLHttpRequest ou via JSONP
+    Ex:  var carregarContatos = function(){
+                $http.get("http://localhost:8080/api/contatos").then(function (data){
+                    console.log(data.data)
+                    $scope.contatos = data.data;
+                }).catch((err) => console.log(err));
+            }
+
+
+# Servicos
+
+## factory
+
+    
