@@ -168,4 +168,11 @@
 
 ## factory
 
+## service
+
+## value
+
+## provider
+
+    Da origem a todos os outros
     

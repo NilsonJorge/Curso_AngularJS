@@ -40,10 +40,15 @@ app.get("/api/contatos", (req, res) => {
 });
 
 app.post("/api/contatos", (req, res) => {
-    var contato = {nome: req.body.nome, telefone: req.body.telefone, data: req.body.data, operadora: req.body.operadora}
-   contatos.push(contato);
- res.status(201).json(contato)
-
+  var contato = {
+    serial: req.body.serial,
+    nome: req.body.nome,
+    telefone: req.body.telefone,
+    data: req.body.data,
+    operadora: req.body.operadora,
+  };
+  contatos.push(contato);
+  res.status(201).json(contato);
 });
 
 app.get("/api/operadoras", (req, res) => {
