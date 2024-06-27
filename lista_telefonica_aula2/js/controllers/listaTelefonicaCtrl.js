@@ -9,7 +9,7 @@ angular
         contatosAPI
           .getContatos()
           .then(function (data) {
-            console.log(data.data);
+            //console.log(data.data);
             $scope.contatos = data.data;
           })
           .catch((err) => console.log(err));
@@ -21,7 +21,7 @@ angular
         operadorasAPI
           .getOperadoras()
           .then(function (data) {
-            console.log(data.data);
+            //console.log(data.data);
             $scope.operadoras = data.data;
           })
           .catch((err) => console.log(err));

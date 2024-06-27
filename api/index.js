@@ -5,21 +5,21 @@ app.use(cors());
 app.use(express.json());
 var contatos = [
   {
-    nome: "Nilson",
+    nome: "Nilson jorge",
     telefone: "99922-9147",
     data: new Date(),
     operadora: { nome: "Oi", codigo: 14 },
     cor: "yellow",
   },
   {
-    nome: "Fabiana",
+    nome: "Fabiana maria",
     telefone: "99627-0841",
     data: new Date(),
     operadora: { nome: "Oi", codigo: 14 },
     cor: "yellow",
   },
   {
-    nome: "Maria",
+    nome: "maria de fátima",
     telefone: "99922-6544",
     data: new Date(),
     operadora: { nome: "Oi", codigo: 14 },
