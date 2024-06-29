@@ -6,6 +6,7 @@
     <title>Lista Telefônica</title>
     <link rel="stylesheet" href="../bootstrap-4.5.3-dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/ui.css">
     <script src="../angular-1.6.10/angular.js"></script>
     <script src="../angular-1.6.10/i18n/angular-locale_pt-br.js" ></script>
     <script src="../angular-1.6.10/angular-messages.js"></script>
@@ -18,11 +19,13 @@
     <script src="js/config/serialGeneratorConfig.js"></script>
     <script src="js/filters/nameFilter.js"></script>
     <script src="js/filters/ellipsisFilter.js"></script>
+    <script src="js/directives/uiAlertDirective.js"></script>
 </head>
 <body ng-controller="listaTelefonicaCtrl">
     <div class="jumbotron">
         <h3 ng-bind="app"></h3>
-        {{message}}
+        <div ui-alert></div>
+        
         <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?">
         <table ng-show="contatos.length > 0" class="table">
             <tr>

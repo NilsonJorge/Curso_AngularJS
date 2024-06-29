@@ -5,6 +5,7 @@ angular
     function ($scope, $filter, contatosAPI, operadorasAPI, serialGenerator) {
       $scope.app = "Lista telefonica";
       $scope.contatos = [];
+      
       var carregarContatos = function () {
         contatosAPI
           .getContatos()
@@ -12,7 +13,7 @@ angular
             //console.log(data.data);
             $scope.contatos = data.data;
           })
-          .catch((err) => console.log(err));
+          .catch((err) => $scope.error = "Não foi possível carregar os dados!");
       };
 
       $scope.operadoras = [];
