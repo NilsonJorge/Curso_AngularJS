@@ -21,11 +21,23 @@
     <script src="js/filters/ellipsisFilter.js"></script>
     <script src="js/directives/uiAlertDirective.js"></script>
     <script src="js/directives/uiDateDirective.js"></script>
+    <script src="js/directives/uiAccordionDirective.js"></script>
 </head>
 <body ng-controller="listaTelefonicaCtrl">
     <div class="jumbotron">
         <h3 ng-bind="app"></h3>
-        <ui-alert title="Ops, aconteceu um problema" message="error"></ui-alert>
+        <ui-accordions>
+            <ui-accordion title="Accordion 1">
+                rthghrhtnerhnrey werewrhbrantseysenrye rtntententertnerrytyneryrt tynsyrysryntry
+            </ui-accordion>
+            <ui-accordion title="Accordion 2">
+                rthghrhtnerhnrey werewrhbrantseysenrye rtntententertnerrytyneryrt tynsyrysryntry
+            </ui-accordion>
+            <ui-accordion title="Accordion 3">
+                rthghrhtnerhnrey werewrhbrantseysenrye rtntententertnerrytyneryrt tynsyrysryntry
+            </ui-accordion>
+        </ui-accordions>
+        <!-- <ui-alert title="Ops, aconteceu um problema" message="error"></ui-alert> -->
         
         <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?">
         <table ng-show="contatos.length > 0" class="table">
