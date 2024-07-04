@@ -175,4 +175,6 @@
 ## provider
 
     Da origem a todos os outros
-    
+
+# ngRoute
+    Módulo do framework que fornece serviços para realizar o roteamento de páginas
