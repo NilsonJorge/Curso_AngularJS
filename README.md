@@ -1,1 +1,5 @@
-Estudo sobre Diretivas, Filtros,etc sobre AngularJS
+Estudo sobre:
+Diretivas
+Filtros
+Modularização
+Rotas
