@@ -1,6 +1,6 @@
 <div class="jumbotron">
         <h3 ng-bind="app"></h3>
-        <ui-accordions>
+        <!-- <ui-accordions>
             <ui-accordion title="Accordion 1">
                 rthghrhtnerhnrey werewrhbrantseysenrye rtntententertnerrytyneryrt tynsyrysryntry
             </ui-accordion>
@@ -10,7 +10,7 @@
             <ui-accordion title="Accordion 3">
                 rthghrhtnerhnrey werewrhbrantseysenrye rtntententertnerrytyneryrt tynsyrysryntry
             </ui-accordion>
-        </ui-accordions>
+        </ui-accordions> -->
         <!-- <ui-alert title="Ops, aconteceu um problema" message="error"></ui-alert> -->
         
         <input class="form-control" type="text" ng-model="criterioDeBusca" placeholder="O que você está buscando?">
@@ -30,7 +30,7 @@
               </td> -->
               <td><input type="checkbox" ng-model="contato.selecionado"></td>
               <td>{{contato.serial}}</td>
-              <td>{{contato.nome | name | ellipsis:12}}</td>
+              <td><a ng-href="#!/detalhesContato/{{contato.id}}">{{contato.nome | name | ellipsis:12}}</a></td>
               <td>{{contato.telefone}}</td>
               <td>{{contato.operadora.nome | lowercase}}</td>
               <!-- <td><div style="width: 20px; height: 20px;" ng-style="{'background-color': contato.cor}"></div></td> -->
