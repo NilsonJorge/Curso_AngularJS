@@ -163,7 +163,6 @@
                 }).catch((err) => console.log(err));
             }
 
-
 # Servicos
 
 ## factory
@@ -177,4 +176,22 @@
     Da origem a todos os outros
 
 # ngRoute
+
     Módulo do framework que fornece serviços para realizar o roteamento de páginas
+
+# Interceptor
+
+    É um tipo de serviço que permite a interceptação das requisições e respostas do serviço $http
+    O serviço $http possui um array de interceptors que podem ser configurados na inicialização da aplicação
+
+## timestamp interceptor
+
+    Adiciona uma marcação contendo um timestamp em todas as requisições
+
+## error interceptor
+
+    Exibe a tela erro padrão caso uma requisição HTTP receba um status code 404 como resposta
+
+## loading interception
+
+    Exibe uma imagem de loading enquanto tiver uma requisição em andamento
