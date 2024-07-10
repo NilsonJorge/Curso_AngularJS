@@ -195,3 +195,7 @@
 ## loading interception
 
     Exibe uma imagem de loading enquanto tiver uma requisição em andamento
+
+# Performance
+
+    Excesso de interação com a DOM e principalmente pelo desperdício de tempo processando coisas desnecessárias, por conta da forma como o ciclo de notificação do framework, também conhecido como digest cycle, funciona.
