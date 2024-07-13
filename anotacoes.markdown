@@ -199,3 +199,8 @@
 # Performance
 
     Excesso de interação com a DOM e principalmente pelo desperdício de tempo processando coisas desnecessárias, por conta da forma como o ciclo de notificação do framework, também conhecido como digest cycle, funciona.
+
+## One time bind
+
+    Apos a variável receber o primeiro valor, ela para de ser vista, melhorando o desempenho
+    EX: {{::contato.telefone}} essa variável só precisar ser carregada uma vez, logo o sistema não precisa ficar escutando ela para alterar

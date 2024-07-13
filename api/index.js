@@ -10,7 +10,7 @@ var contatos = [
     nome: "Nilson jorge",
     telefone: "99922-9147",
     data: new Date(),
-    operadora: { nome: "Oi", codigo: 14 },
+    operadora: { nome: "Oi", codigo: 14, categoria: "Celular", preco: 3 },
     cor: "yellow",
   },
   {
@@ -18,7 +18,7 @@ var contatos = [
     nome: "Fabiana maria",
     telefone: "99627-0841",
     data: new Date(),
-    operadora: { nome: "Oi", codigo: 14 },
+    operadora: { nome: "Oi", codigo: 14, categoria: "Celular", preco: 3},
     cor: "yellow",
   },
   {
@@ -26,7 +26,7 @@ var contatos = [
     nome: "maria de fátima",
     telefone: "99922-6544",
     data: new Date(),
-    operadora: { nome: "Oi", codigo: 14 },
+    operadora: {  nome: "Oi", codigo: 14, categoria: "Celular", preco: 3 },
     cor: "yellow",
   },
 ];

@@ -6,6 +6,18 @@ angular
       $scope.app = "Lista telefonica";
       $scope.contatos = contatos.data;
 
+      var init = function () {
+        calcularImpostos($scope.contatos);
+        generateSerial($scope.contatos);
+      };
+      
+      var calcularImpostos = function (contatos) {
+        contatos.forEach(contato => {
+          contato.operadora.precoComImposto = calcularImposto(contato.operadora.preco)
+
+        });
+      }
+
       var generateSerial = function (contatos) {
         contatos.forEach((item) => {
           item.serial = serialGenerator.generate();
@@ -34,9 +46,10 @@ angular
           if (!contato.selecionado) return contato;
         });
       };
-
-      $scope.isContatoSelecionado = function (contatos) {
-        return contatos.some(function (contato) {
+      var counter = 0;
+      $scope.verificarContatoSelecionado = function (contatos) {
+        console.log(counter++);
+        $scope.hasContatoSelecionado = contatos.some(function (contato) {
           return contato.selecionado;
         });
       };
@@ -44,6 +57,12 @@ angular
         $scope.criterioDeOrdenacao = campo;
         $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
       };
-      generateSerial($scope.contatos);
+
+  
+      var calcularImposto = function (preco) {
+        var imposto = 1.2;
+        return preco * imposto;
+      };
+      init()
     }
   );
