@@ -204,3 +204,12 @@
 
     Apos a variável receber o primeiro valor, ela para de ser vista, melhorando o desempenho
     EX: {{::contato.telefone}} essa variável só precisar ser carregada uma vez, logo o sistema não precisa ficar escutando ela para alterar
+
+## ng-model-option
+
+    Muda o comportamento do ng-model, por exemplo, so vai atribuir o que foi escrito a respectiva variável após derminar de digitar e não a cada letra
+    Ex: ng-model="criterioDeBusca" ng-model-options="{updateOn: 'default blur', debounce: {default: 500, blur: 0}}"
+
+## track by
+
+    Sempre defina o track by quando utilizar ng-repeat e ng-options

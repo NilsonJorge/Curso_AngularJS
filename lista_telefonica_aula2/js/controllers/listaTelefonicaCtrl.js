@@ -10,13 +10,14 @@ angular
         calcularImpostos($scope.contatos);
         generateSerial($scope.contatos);
       };
-      
-      var calcularImpostos = function (contatos) {
-        contatos.forEach(contato => {
-          contato.operadora.precoComImposto = calcularImposto(contato.operadora.preco)
 
+      var calcularImpostos = function (contatos) {
+        contatos.forEach((contato) => {
+          contato.operadora.precoComImposto = calcularImposto(
+            contato.operadora.preco
+          );
         });
-      }
+      };
 
       var generateSerial = function (contatos) {
         contatos.forEach((item) => {
@@ -58,11 +59,15 @@ angular
         $scope.direcaoDaOrdenacao = !$scope.direcaoDaOrdenacao;
       };
 
-  
       var calcularImposto = function (preco) {
         var imposto = 1.2;
         return preco * imposto;
       };
-      init()
+
+      $scope.reset = function () {
+        $scope.contatos = angular.copy($scope.contatos);
+      };
+
+      init();
     }
   );
