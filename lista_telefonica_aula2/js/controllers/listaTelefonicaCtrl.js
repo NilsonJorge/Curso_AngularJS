@@ -2,8 +2,8 @@ angular
   .module("listaTelefonica")
   .controller(
     "listaTelefonicaCtrl",
-    function ($scope, $filter, contatos, serialGenerator, operadoras) {
-      $scope.app = "Lista telefonica";
+    function ($scope, $filter, contatos, serialGenerator, operadoras, $filter) {
+      $scope.app = $filter('upper')("Lista telefonica");
       $scope.contatos = contatos.data;
 
       var init = function () {
